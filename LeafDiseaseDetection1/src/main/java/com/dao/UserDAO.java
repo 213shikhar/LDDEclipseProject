@@ -59,13 +59,13 @@ public class UserDAO {
 		
 	}
 	
-//	// MAKE A CHANGE PASSWORD METHOD
-//	public void updatePass(String op, String np) {}
-//	
-////	public void deleteRecord() {
-////		try {
-////			ps = r.prepareStatement("delete from user where Name = ");
-////		}
-////		catch(Exception e) {}
-////	}
+	public void addFeedback(String fd, String em) {
+		try {
+			ps = r.prepareStatement("update user set Feedback = ? where Email = ?");
+			ps.setString(1, fd);
+			ps.setString(2, em);
+			ps.executeUpdate();
+		}
+		catch(Exception e) {}
+	}
 }
