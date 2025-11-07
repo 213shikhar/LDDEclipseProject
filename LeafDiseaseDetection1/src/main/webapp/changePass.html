@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Password</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Change your password</h1>
+
+    <form onsubmit="checkPass(event)" action="changePass" method="post">
+        New Password: <input type="password" id="nPass" name="nPass"/><br><br>
+        Confirm Password: <input type="password" id="cPass" /><br><br>
+        <input type="submit" value="Change Password" />
+    </form>
+
+    <script>
+        function checkPass(event) {
+            event.preventDefault(); // prevents page reload
+
+            let value = document.getElementById("nPass").value;
+            let value2 = document.getElementById("cPass").value;
+
+            if (value === value2) {
+               // alert("Passwords Matched!");
+               event.target.submit();
+            } else {
+                alert("Passwords do not match!");
+            }
+        }
+    </script>
+</body>
+</html>
