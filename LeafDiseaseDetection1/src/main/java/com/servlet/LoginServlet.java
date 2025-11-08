@@ -16,7 +16,6 @@ import java.io.IOException;
 public class LoginServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
-			response.setContentType("text/html");
 			String email = request.getParameter("email");
 			String password = request.getParameter("password");
 			PrintWriter out = response.getWriter();

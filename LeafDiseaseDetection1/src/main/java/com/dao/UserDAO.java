@@ -24,6 +24,18 @@ public class UserDAO {
 		catch (Exception excp){}
 	}
 	
+	public void addAdmin(String n, String p, String e) {
+		try {
+			ps = r.prepareStatement("insert into admin values(?,?,?)");
+			ps.setString(1, n);
+			ps.setString(2, p);
+			ps.setString(3, e);
+			ps.execute();
+//			System.out.println("Admin Added!");
+		}
+		catch (Exception excp){}
+	}
+	
 	// checking for existing record
 	public boolean checkRecord(String e, String p) {
 		try {
