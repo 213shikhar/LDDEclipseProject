@@ -32,7 +32,7 @@
 	// ASK ABOUT WHY ELSE CONDITION IS RUNNING!
 	else{
 		out.println("<html><body><h2>User Not Found! Please Register: "
-				+ "<a href='register.html'>Register</a></body></html>");
+				+ "<a href='adminReg.jsp'>Register</a></body></html>");
 		// response.sendRedirect("index.html");
 	}
 %>
